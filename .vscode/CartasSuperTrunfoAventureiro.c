@@ -7,7 +7,7 @@
 //Teste larissa
 
 int main() {
-    printf("\nDesafio Super Trunfo: nível Mestre\n");
+    printf("\nDesafio Super Trunfo: nível aventureiro\n");
 
     char Estado; // Letra que representa o estado(A à H)
     int PontosTuristicos; //quantidade de pontos turisticos
@@ -18,7 +18,7 @@ int main() {
     float PIB; // Produto Interno Bruto da cidade
     float Densidade; // Densidade poupulacional: População/Área
     float percapita; // Renda perCapita da população: PIB/População
-   
+
 
     char Estado2; // Letra que representa o estado(A à H)
     int PontosTuristicos2; //quantidade de pontos turisticos
@@ -29,9 +29,8 @@ int main() {
     float PIB2; // Produto Interno Bruto da cidade
     float Densidade2; // Densidade poupulacional: População/Área
     float percapita2; // Renda perCapita da população: PIB/População
-    
 
-//Cadastro da carta 1
+//Informações da carta 1
 printf("\n----------Cadastre os dados da Carta 1----------\n\n");
 
     printf("Digite o Estado:\n");
@@ -55,7 +54,7 @@ printf("\n----------Cadastre os dados da Carta 1----------\n\n");
     printf("Digite o número de pontos turísticos da Cidade:\n");
     scanf("%d", &PontosTuristicos);
 
-//Cadastro da carta 2
+//Informações da carta 2
 printf("\n----------Cadatres os dados da carta 2----------\n\n");
 
     printf("Digite o Estado:\n");
@@ -79,17 +78,14 @@ printf("\n----------Cadatres os dados da carta 2----------\n\n");
     printf("Digite o número de pontos turísticos da Cidade:\n");
     scanf("%d", &PontosTuristicos2);
 
-    Densidade = (float) População / Área;
+    Densidade = (float)População / Área;
 
     /*Preferi multiplicar PIB por 1 bilhão devido ao fato de o PIB ser muito pequeno
     Exemplo: PIB = 1.23 bilhões. caso não tivesse a multiplicação por 1 bilhão,
     o número seria muit próximo de 0. não sendo o resultado desejado*/ 
     percapita = (PIB * 1000000000.0) / População;
     
-    // soma de todas as variaveis númericas pelo inverso da densidade
-    float superpoder = (float) População + (float) Área + (PIB * 1000000000.0) + (float) PontosTuristicos + (float) percapita + (1.0 / Densidade);
-   
-    printf("\nCARTA 1\n");
+    printf("\nCarta 1\n");
     printf("Estado: %c\n", Estado);
     printf("Código da cidade: %s\n", Codigo);
     printf("Cidade: %s\n", cidade);
@@ -99,15 +95,11 @@ printf("\n----------Cadatres os dados da carta 2----------\n\n");
     printf("Número de pontos turísticos: %d\n", PontosTuristicos);
     printf("A densidade populacional é: %.2f hab/km²\n", Densidade);
     printf("O PIB perCapita da cidade é: %.2f reais\n", percapita);
-    printf("O seu Super Poder é de mais de %.2f\n", superpoder);
+
     Densidade2 = (float)População2 / Área2;
     
-    percapita2 = (PIB2 * 1000000000.0) / População2; 
-    
-    // soma de todas as variaveis númericas pelo inverso da densidade
-    float superpoder2 = (float)População2 + (float) Área2 + (PIB2 * 1000000000.0f) + (float) PontosTuristicos2 + (float) percapita2 + (1.0f / Densidade2);   
-    
-    printf("\nCARTA 2\n");
+    percapita2 = (PIB2 * 1000000000.0) / População2;    
+    printf("\nCarta 2\n");
     printf("Estado: %c\n", Estado2);
     printf("Código da cidade: %s\n", Codigo2);
     printf("Cidade: %s\n", cidade2);
@@ -117,20 +109,8 @@ printf("\n----------Cadatres os dados da carta 2----------\n\n");
     printf("Número de pontos turísticos: %d\n", PontosTuristicos2);
     printf("A densidade populacional é: %.2f hab/km²\n", Densidade2);
     printf("O PIB perCapita da cidade é: %.2f reais\n", percapita2);
-    printf("O seu Super Poder é de mais de %.2f\n", superpoder2);
-
-    printf("\n------------DISPUTA DE CARTAS------------\n");
-    printf("\n***************ATENÇÃO***************\n");
-    printf("***Se o resultado for '1', a carta 1 ganha\n");
-    printf("***Se o resultado for '0', a carta 2 ganha\n");
-
-    printf("A população ganhadora é de %d\n", (População > População2));
-    printf("A Área ganhadora é de %d\n", (Área > Área2));
-    printf("O PIB ganhador é de %d\n", (PIB > PIB2));
-    printf("Os pontos turirsticos ganhadores são de %d\n", (PontosTuristicos > PontosTuristicos2));
-    printf("A Densidade populacional ganhadora é de %d\n", (Densidade < Densidade2));
-    printf("O PIB perCapita ganhador é de %d\n", (percapita > percapita2));
-    printf("O maio super poder mais forte é de %d\n", (superpoder > superpoder2));
+    
+    
     // Sugestão: Defina variáveis separadas para cada atributo da cidade.
     // Exemplos de atributos: código da cidade, nome, população, área, PIB, número de pontos turísticos.
     
