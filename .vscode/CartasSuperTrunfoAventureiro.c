@@ -30,7 +30,7 @@ int main() {
     float Densidade2; // Densidade poupulacional: População/Área
     float percapita2; // Renda perCapita da população: PIB/População
 
-//Cadastro da carta 1
+//Informações da carta 1
 printf("\n----------Cadastre os dados da Carta 1----------\n\n");
 
     printf("Digite o Estado:\n");
@@ -54,7 +54,7 @@ printf("\n----------Cadastre os dados da Carta 1----------\n\n");
     printf("Digite o número de pontos turísticos da Cidade:\n");
     scanf("%d", &PontosTuristicos);
 
-//Cadastro da carta 2
+//Informações da carta 2
 printf("\n----------Cadatres os dados da carta 2----------\n\n");
 
     printf("Digite o Estado:\n");
@@ -84,8 +84,8 @@ printf("\n----------Cadatres os dados da carta 2----------\n\n");
     Exemplo: PIB = 1.23 bilhões. caso não tivesse a multiplicação por 1 bilhão,
     o número seria muit próximo de 0. não sendo o resultado desejado*/ 
     percapita = (PIB * 1000000000.0) / População;
-
-    printf("\nCARTA 1\n");
+    
+    printf("\nCarta 1\n");
     printf("Estado: %c\n", Estado);
     printf("Código da cidade: %s\n", Codigo);
     printf("Cidade: %s\n", cidade);
@@ -99,7 +99,7 @@ printf("\n----------Cadatres os dados da carta 2----------\n\n");
     Densidade2 = (float)População2 / Área2;
     
     percapita2 = (PIB2 * 1000000000.0) / População2;    
-    printf("\nCARTA 2\n");
+    printf("\nCarta 2\n");
     printf("Estado: %c\n", Estado2);
     printf("Código da cidade: %s\n", Codigo2);
     printf("Cidade: %s\n", cidade2);
